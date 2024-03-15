@@ -1,20 +1,41 @@
 package org.bryan_chanona.panaderiaproyect.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class LoginController {
-    String Holabb;
-    String CarlosGayXD;
 
     @FXML
-    private Label welcomeText;
+    private ResourceBundle resources;
 
     @FXML
-    private Label velcometa;
+    private URL location;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private PasswordField Passwordtext;
+
+    @FXML
+    private Button SingInButton;
+
+    @FXML
+    private TextField Ussertext;
+
+    @FXML
+    void OnMouseClickedSingInButton(MouseEvent event) {
+
     }
+
+    @FXML
+    void initialize() {
+        assert Passwordtext != null : "fx:id=\"Passwordtext\" was not injected: check your FXML file 'login-view.fxml'.";
+        assert SingInButton != null : "fx:id=\"SingInButton\" was not injected: check your FXML file 'login-view.fxml'.";
+        assert Ussertext != null : "fx:id=\"Ussertext\" was not injected: check your FXML file 'login-view.fxml'.";
+
+    }
+
 }
