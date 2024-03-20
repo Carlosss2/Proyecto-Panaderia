@@ -1,11 +1,10 @@
-module carlos.c.projectpanaderia {
+module org.bryan_chanona.panaderiaproyect {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens carlos.c.projectpanaderia to javafx.fxml;
-    exports carlos.c.projectpanaderia;
-    exports carlos.c.projectpanaderia.controllers;
-    opens carlos.c.projectpanaderia.controllers to javafx.fxml;
-
+    opens org.bryan_chanona.panaderiaproyect to javafx.fxml;
+    exports org.bryan_chanona.panaderiaproyect;
+    exports org.bryan_chanona.panaderiaproyect.controllers;
+    opens org.bryan_chanona.panaderiaproyect.controllers to javafx.fxml;
 }

@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>carlos.c</groupId>
-    <artifactId>ProjectPanaderia</artifactId>
+    <groupId>org.bryan_chanona</groupId>
+    <artifactId>Panaderia-proyect</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Project Panaderia</name>
+    <name>Panaderia-proyect</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,12 +38,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>win-x86</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -66,7 +60,9 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>carlos.c.projectpanaderia/carlos.c.projectpanaderia.HelloApplication</mainClass>
+                            <mainClass>
+                                org.bryan_chanona.panaderiaproyect/org.bryan_chanona.panaderiaproyect.App
+                            </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

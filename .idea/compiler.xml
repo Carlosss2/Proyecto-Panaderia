@@ -8,8 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ProjectPanaderia" />
         <module name="ProjectPanaderia (1)" />
-        <module name="ProjectPanaderia (2)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ProjectPanaderia (2)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
