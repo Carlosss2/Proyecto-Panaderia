@@ -37,6 +37,7 @@ public class ProductoController {
     @FXML
     void onMouseClickModificarButton(MouseEvent event) {
 
+
     }
 
     @FXML
@@ -45,7 +46,12 @@ public class ProductoController {
     }
 
     @FXML
-    void onMouseClickeliminarButton(MouseEvent event) {
+    void onMouseClickeliminarButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("eliminarProducto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callEliminarProducto.setTitle("Hello!");
+        callEliminarProducto.setScene(scene);
+        callEliminarProducto.show();
 
     }
 
