@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class ProductoController {
 
@@ -12,9 +13,15 @@ public class ProductoController {
 
     @FXML
     private URL location;
+    Stage callAgregarproduct = new Stage();
+    Stage callModificarproducto = new Stage();
+    Stage callVenderProducto =  new Stage();
+    Stage callEliminarProducto = new Stage();
+    
 
     @FXML
     void onMouseClickAgregarButton(MouseEvent event) {
+
 
     }
 
