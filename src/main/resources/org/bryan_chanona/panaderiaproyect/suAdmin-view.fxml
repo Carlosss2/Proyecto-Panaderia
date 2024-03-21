@@ -6,19 +6,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB45B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.SuAdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #EBB45B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.SuAdminController">
    <children>
-      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="77.0" layoutY="70.0">
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="109.0" layoutY="70.0" onMouseClicked="#onMouseClickProductosButton">
          <image>
             <Image url="@img/panaderia.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="231.0" layoutY="70.0">
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="263.0" layoutY="70.0" onMouseClicked="#onMouseClickMateriaPrimaButton">
          <image>
             <Image url="@img/materiPrima.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="80.0" layoutY="181.0" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #dcdcdc;">
+      <AnchorPane layoutX="109.0" layoutY="181.0" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #dcdcdc;">
          <children>
             <Text layoutX="28.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos" wrappingWidth="51.05859375">
                <font>
@@ -27,7 +27,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="231.0" layoutY="181.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #dcdcdc;">
+      <AnchorPane layoutX="262.0" layoutY="181.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #dcdcdc;">
          <children>
             <Text layoutX="20.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia prima">
                <font>
@@ -36,27 +36,27 @@
             </Text>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="128.0" fitWidth="114.0" layoutX="387.0" layoutY="53.0">
+      <ImageView fitHeight="128.0" fitWidth="114.0" layoutX="410.0" layoutY="50.0" onMouseClicked="#onMouseClickReporteButton">
          <image>
             <Image url="@img/reporte.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="383.0" layoutY="181.0" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #dcdcdc;">
+      <AnchorPane layoutX="413.0" layoutY="181.0" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #dcdcdc;">
          <children>
             <Text layoutX="19.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generar reporte" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-1.0" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #EBA15B;">
+      <AnchorPane layoutX="-1.0" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #EBA15B;">
          <children>
-            <Text layoutX="391.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido SuperAdministrador" />
+            <Text layoutX="488.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenida Reyna" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="154.0" layoutY="223.0">
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="103.0" layoutY="230.0" onMouseClicked="#onMouseClickEmpleadosButton">
          <image>
             <Image url="@img/grupo.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="160.0" layoutY="319.0" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #dcdcdc;">
+      <AnchorPane layoutX="109.0" layoutY="334.0" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #dcdcdc;">
          <children>
             <Text layoutX="25.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empleados" wrappingWidth="57.45855712890625">
                <font>
@@ -65,14 +65,14 @@
             </Text>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="302.0" layoutY="216.0">
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="262.0" layoutY="230.0" onMouseClicked="#onMouseClickRegistroVentasButton">
          <image>
             <Image url="@img/punto-de-venta.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="298.0" layoutY="319.0" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #dcdcdc;">
+      <AnchorPane layoutX="258.0" layoutY="334.0" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #dcdcdc;">
          <children>
-            <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de ventas" wrappingWidth="98.0">
+            <Text layoutX="12.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de ventas" wrappingWidth="98.0">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
