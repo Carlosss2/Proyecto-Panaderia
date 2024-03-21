@@ -17,7 +17,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="694.0" />
-      <Label layoutX="96.0" layoutY="8.0" text="Agregar Productos" textFill="WHITE">
+      <Label layoutX="96.0" layoutY="8.0" text="Editar Productos" textFill="WHITE">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
