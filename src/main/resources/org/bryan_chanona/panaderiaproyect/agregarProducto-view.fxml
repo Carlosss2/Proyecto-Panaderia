@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.VenderProductoController">
+<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.VenderProductoController">
    <children>
-      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1.0">
+      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1.0cd">
          <image>
             <Image url="@img/esquina1.png" />
          </image>
@@ -17,52 +19,64 @@
       <Button fx:id="YEMA" layoutX="64.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="YEMA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="64.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA MATIZADA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="255.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BIENMESABE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="64.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA SIMPLE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="255.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MALETA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="444.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="HIGO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="444.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MICROPAN" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="255.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CAZUELEJA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="641.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CHORIZO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="641.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BOLILLO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="444.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ZISOTE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
+         </font>
+      </Button>
       <Button layoutX="641.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="EMPANADA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
-         </font></Button>
-      <Label layoutX="77.0" layoutY="76.0" prefHeight="71.0" prefWidth="760.0" text="PRECIONE PRODUCTO A VENDER">
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="76.0" prefHeight="71.0" prefWidth="760.0" text="PRECIONE PRODUCTO A AGREGAR">
          <font>
             <Font name="Impact" size="57.0" />
          </font>
@@ -77,7 +91,7 @@
             <Font name="Tahoma Bold" size="38.0" />
          </font>
       </Label>
-      <Label layoutX="430.0" layoutY="502.0" text="Selecciona el tipo de pan que deseas vender porfavor.">
+      <Label layoutX="430.0" layoutY="502.0" text="Selecciona el tipo de pan que deseas agregar porfavor.">
          <font>
             <Font size="18.0" />
          </font>
