@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.VenderProductoController">
+   <children>
+      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1.0">
+         <image>
+            <Image url="@img/esquina1.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="110.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1006.0" />
+      <Button fx:id="YEMA" layoutX="668.0" layoutY="438.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="HARINA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="331.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MANTEQUILLA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="256.0" layoutY="219.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="AGUA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="219.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="AZUCAR" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="256.0" layoutY="331.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="VAINILLA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="668.0" layoutY="331.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="AJONJOLI" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="668.0" layoutY="219.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="LECHE" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="454.0" layoutY="219.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="LEVADURA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="450.0" layoutY="331.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="HUEVOS" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="76.0" prefHeight="71.0" prefWidth="760.0" text="PRECIONE MATERIAL A AGREGAR">
+         <font>
+            <Font name="Impact" size="57.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="304.0" fitWidth="456.0" layoutY="425.0">
+         <image>
+            <Image url="@img/pan2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="576.0" layoutY="14.0" text="PANADERIA REYNITA" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -41,7 +41,7 @@ public class LoginController {
         if (userName.equals(usuarioLogin.getUserSuperAd()) && userPassword.equals(usuarioLogin.getContraseniaSu())){
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("suAdmin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
                 callSu.setTitle("Hello!");
