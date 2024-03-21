@@ -1,4 +1,4 @@
 package org.bryan_chanona.panaderiaproyect.controllers;
 
-public class suAdminController {
+public class AgregarProductoController {
 }

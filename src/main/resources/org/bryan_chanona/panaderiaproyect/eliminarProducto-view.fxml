@@ -8,9 +8,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.AgregarProductoController">
+<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EliminarProductoController">
    <children>
-      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1">
+      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1.0">
          <image>
             <Image url="@img/esquina1.png" />
          </image>
@@ -76,7 +76,7 @@
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Label layoutX="77.0" layoutY="76.0" prefHeight="71.0" prefWidth="760.0" text="PRECIONE PRODUCTO A AGREGAR">
+      <Label layoutX="77.0" layoutY="76.0" prefHeight="71.0" prefWidth="760.0" text="PRECIONE PRODUCTO A ELIMINAR">
          <font>
             <Font name="Impact" size="57.0" />
          </font>
@@ -91,7 +91,7 @@
             <Font name="Tahoma Bold" size="38.0" />
          </font>
       </Label>
-      <Label layoutX="430.0" layoutY="502.0" text="Selecciona el tipo de pan que deseas agregar porfavor.">
+      <Label layoutX="430.0" layoutY="502.0" text="Selecciona el tipo de pan que deseas eliminar porfavor.">
          <font>
             <Font size="18.0" />
          </font>
