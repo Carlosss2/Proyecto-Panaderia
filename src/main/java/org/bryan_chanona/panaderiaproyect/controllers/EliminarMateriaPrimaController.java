@@ -21,7 +21,7 @@ public class EliminarMateriaPrimaController {
 
         @FXML
         void initialize() {
-            assert YEMA != null : "fx:id=\"YEMA\" was not injected: check your FXML file 'eliminarMateriaPrima-view.fxml'.";
+
 
         }
 

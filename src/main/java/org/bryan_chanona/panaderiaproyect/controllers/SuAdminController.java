@@ -18,6 +18,7 @@ public class SuAdminController {
     @FXML
     private URL location;
     Stage callProducto = new Stage();
+    Stage callMateriaPrima = new Stage();
 
     @FXML
     void onMouseClickEmpleadosButton(MouseEvent event) {
@@ -25,27 +26,26 @@ public class SuAdminController {
     }
 
     @FXML
-    void onMouseClickMateriaPrimaButton(MouseEvent event) {
+    void onMouseClickMateriaPrimaButton(MouseEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("materiaPrima-view.fxml"));
+        Scene scene = null;
+        scene = new Scene(fxmlLoader.load());
+        callMateriaPrima.setTitle("Hello!");
+        callMateriaPrima.setScene(scene);
+        callMateriaPrima.show();
+
+
 
     }
 
     @FXML
-    void onMouseClickProductosButton(MouseEvent event) {
-
-        try {
-
+    void onMouseClickProductosButton(MouseEvent event) throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("producto-view.fxml"));
             Scene scene = null;
             scene = new Scene(fxmlLoader.load());
             callProducto.setTitle("Hello!");
             callProducto.setScene(scene);
             callProducto.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-
 
     }
 

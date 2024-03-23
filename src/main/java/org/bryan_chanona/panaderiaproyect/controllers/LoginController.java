@@ -41,7 +41,7 @@ public class LoginController {
         if (userName.equals(usuarioLogin.getUserSuperAd()) && userPassword.equals(usuarioLogin.getContraseniaSu())){
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("SuAdmin-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("suAdmin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
                 callSu.setTitle("Hello!");
@@ -53,7 +53,7 @@ public class LoginController {
         } else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("admin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
                 callAd.setTitle("Hello!");

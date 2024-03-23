@@ -10,7 +10,7 @@
     <children>
         <AnchorPane prefHeight="278.0" prefWidth="640.0" style="-fx-background-color: #E0A653;">
             <children>
-                <Button layoutX="273.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#onMouseClickeliminarButton" prefHeight="26.0" prefWidth="122.0" text="Eliminar producto" />
+                <Button layoutX="273.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#onMouseClickEliminarButton" prefHeight="26.0" prefWidth="122.0" text="Eliminar producto" />
                 <Button layoutX="273.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVenderButton" prefHeight="26.0" prefWidth="122.0" text="Vender producto" />
                 <Button layoutX="273.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#onMouseClickModificarButton" prefHeight="26.0" prefWidth="122.0" text="Modificar producto" />
                 <Button layoutX="273.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#onMouseClickAgregarButton" prefHeight="26.0" prefWidth="122.0" text="Agregar producto" />
@@ -18,7 +18,7 @@
         </AnchorPane>
         <ImageView fitHeight="218.0" fitWidth="330.0" layoutX="-10.0" layoutY="260.0">
             <image>
-                <Image url="@img/imagenPanes.png" />
+                <Image url="@img" />
             </image>
         </ImageView>
     </children>
