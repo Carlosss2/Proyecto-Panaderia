@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EditarMateriaPrimaController">
+<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EditarProductoController">
     <children>
         <ImageView fitHeight="456.0" fitWidth="499.0" layoutX="195.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
             <image>

@@ -6,12 +6,24 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 
 public class ProductoController {
 
+
+    @FXML
+    private Button addProduct;
+    @FXML
+    private Button eliminarProducto;
+
+    @FXML
+    private Button modifiedProduct;
+
+    @FXML
+    private Button venderProducto;
     @FXML
     private ResourceBundle resources;
 
@@ -68,6 +80,7 @@ public class ProductoController {
 
     @FXML
     void initialize() {
+        addProduct.getStylesheets().add("estilos.css");
 
     }
 
