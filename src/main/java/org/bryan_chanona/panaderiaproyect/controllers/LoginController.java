@@ -26,9 +26,9 @@ public class LoginController {
     @FXML
     private PasswordField Passwordtext;
 
-    @FXML
-    private Button SingInButton;
 
+    @FXML
+    private Button SignInButton;
     @FXML
     private TextField Usertext;
     Stage callSu = new Stage();
@@ -69,8 +69,8 @@ public class LoginController {
 
     @FXML
     void initialize() {
-
-
+      SignInButton.getStylesheets().add("estilos.css");
     }
+
 
 }

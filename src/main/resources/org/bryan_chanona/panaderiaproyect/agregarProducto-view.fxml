@@ -10,68 +10,68 @@
 
 <AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.AgregarProductoController">
    <children>
-      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1">
+      <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="280.0">
          <image>
             <Image url="@img/esquina1.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="110.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1006.0" />
-      <Button fx:id="YEMA" layoutX="64.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="YEMA" textFill="WHITE">
+      <Button fx:id="yemaButton" layoutX="64.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#onMouseClickYemaButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="YEMA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="64.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA MATIZADA" textFill="WHITE">
+      <Button fx:id="matizadaButton" layoutX="56.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#onMouseClickMatizadaButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA MATIZADA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="255.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BIENMESABE" textFill="WHITE">
+      <Button fx:id="bienmesabeButton" layoutX="255.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickBienmesabeButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BIENMESABE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="64.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA SIMPLE" textFill="WHITE">
+      <Button fx:id="simpleButton" layoutX="64.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickSimpleButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ROSQUILLA SIMPLE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="255.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MALETA" textFill="WHITE">
+      <Button fx:id="malateButton" layoutX="255.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#onMouseClickMaletaButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MALETA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="444.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="HIGO" textFill="WHITE">
+      <Button fx:id="higoButton" layoutX="444.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#onMouseClickHigoButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="HIGO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="444.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MICROPAN" textFill="WHITE">
+      <Button fx:id="micropanButton" layoutX="444.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickMicroButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="MICROPAN" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="255.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CAZUELEJA" textFill="WHITE">
+      <Button fx:id="cazuelejaButton" layoutX="255.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#onMouseClickCazuelejaButton" prefHeight="87.0" prefWidth="172.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CAZUELEJA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="641.0" layoutY="376.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CHORIZO" textFill="WHITE">
+      <Button fx:id="chorizoButton" layoutX="641.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#onMouseClickChorizoButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="CHORIZO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="641.0" layoutY="264.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BOLILLO" textFill="WHITE">
+      <Button fx:id="bolilloButton" layoutX="641.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickBolilloButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="BOLILLO" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="444.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ZISOTE" textFill="WHITE">
+      <Button fx:id="zisoteButton" layoutX="444.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#onMouseClickZisoteButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="ZISOTE" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="641.0" layoutY="161.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="EMPANADA" textFill="WHITE">
+      <Button fx:id="empanadaButton" layoutX="641.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#onMouseClickEmpnadaButton" prefHeight="87.0" prefWidth="179.0" style="-fx-background-color: #C70039; -fx-background-radius: 25;" text="EMPANADA" textFill="WHITE">
          <font>
             <Font name="Tahoma Bold" size="13.0" />
          </font>
@@ -81,7 +81,7 @@
             <Font name="Impact" size="57.0" />
          </font>
       </Label>
-      <ImageView fitHeight="304.0" fitWidth="456.0" layoutY="425.0">
+      <ImageView fitHeight="306.0" fitWidth="456.0" layoutY="423.0">
          <image>
             <Image url="@img/pan2.png" />
          </image>

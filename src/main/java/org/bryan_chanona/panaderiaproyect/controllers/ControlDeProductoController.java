@@ -1,5 +1,4 @@
 package org.bryan_chanona.panaderiaproyect.controllers;
 
-public class EditarProductoController {
-
+public class ControlDeProductoController {
 }
