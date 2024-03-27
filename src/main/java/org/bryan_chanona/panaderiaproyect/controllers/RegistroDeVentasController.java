@@ -1,14 +1,11 @@
+
 package org.bryan_chanona.panaderiaproyect.controllers;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-public class EliminarMateriaPrimaController {
 
-
-
-
-
+    public class RegistroDeVentasController {
 
         @FXML
         private ResourceBundle resources;
@@ -17,14 +14,10 @@ public class EliminarMateriaPrimaController {
         private URL location;
 
         @FXML
-        private Button YEMA;
-
-        @FXML
         void initialize() {
-
 
         }
 
-    }
 
 
+}

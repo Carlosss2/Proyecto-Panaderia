@@ -53,7 +53,7 @@ public class LoginController {
         } else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("admin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
                 callAd.setTitle("Hello!");
