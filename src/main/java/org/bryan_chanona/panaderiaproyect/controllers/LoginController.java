@@ -44,7 +44,7 @@ public class LoginController {
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("suAdmin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
-                callSu.setTitle("Hello!");
+                callSu.setTitle("!");
                 callSu.setScene(scene);
                 callSu.show();
             } catch (IOException e) {
@@ -56,7 +56,7 @@ public class LoginController {
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("admin-view.fxml"));
                 Scene scene = null;
                 scene = new Scene(fxmlLoader.load());
-                callAd.setTitle("Hello!");
+                callAd.setTitle("!");
                 callAd.setScene(scene);
                 callAd.show();
             } catch (IOException e) {
