@@ -80,7 +80,6 @@ public class ProductoController {
 
     @FXML
     void initialize() {
-        addProduct.getStylesheets().add("estilos.css");
 
     }
 

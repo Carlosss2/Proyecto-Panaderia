@@ -122,7 +122,6 @@ public class AgregarProductoController {
 
     @FXML
     void initialize() {
-        yemaButton.getStylesheets().add("estilos.css");
     }
 
 }

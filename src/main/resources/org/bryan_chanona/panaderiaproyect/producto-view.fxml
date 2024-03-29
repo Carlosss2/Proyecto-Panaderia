@@ -5,14 +5,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #E08E53;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.ProductoController">
     <children>
         <AnchorPane prefHeight="278.0" prefWidth="640.0" style="-fx-background-color: #E0A653;">
             <children>
-                <Button fx:id="eliminarProducto" layoutX="273.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#onMouseClickEliminarButton" prefHeight="26.0" prefWidth="122.0" text="Eliminar producto" />
-                <Button fx:id="venderProducto" layoutX="273.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVenderButton" prefHeight="26.0" prefWidth="122.0" text="Vender producto" />
-                <Button fx:id="modifiedProduct" layoutX="273.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#onMouseClickModificarButton" prefHeight="26.0" prefWidth="122.0" text="Modificar producto" />
-                <Button fx:id="addProduct" layoutX="273.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#onMouseClickAgregarButton" prefHeight="26.0" prefWidth="122.0" text="Agregar producto" />
+                <Button layoutX="273.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#onMouseClickEliminarButton" prefHeight="26.0" prefWidth="122.0" text="Eliminar producto" />
+                <Button layoutX="273.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVenderButton" prefHeight="26.0" prefWidth="122.0" text="Vender producto" />
+                <Button layoutX="273.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#onMouseClickModificarButton" prefHeight="26.0" prefWidth="122.0" text="Modificar producto" />
+                <Button layoutX="273.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#onMouseClickAgregarButton" prefHeight="26.0" prefWidth="122.0" text="Agregar producto" />
             </children>
         </AnchorPane>
         <ImageView fitHeight="218.0" fitWidth="330.0" layoutX="-10.0" layoutY="260.0">
