@@ -1,2 +1,4 @@
-package org.bryan_chanona.panaderiaproyect.controllers;public class AgregarUserController {
+package org.bryan_chanona.panaderiaproyect.controllers;
+
+public class AgregarUserController {
 }

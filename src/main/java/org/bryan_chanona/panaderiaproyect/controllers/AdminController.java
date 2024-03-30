@@ -20,10 +20,17 @@ public class AdminController {
     private URL location;
     Stage callProducto = new Stage();
     Stage callMateriaPrima = new Stage();
+    Stage callEmpleado = new Stage();
 
 
     @FXML
-    void onMouseClickEmpleadosButton(MouseEvent event) {
+    void onMouseClickEmpleadosButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("usuario-view.fxml"));
+        Scene scene = null;
+        scene = new Scene(fxmlLoader.load());
+        callEmpleado.setTitle("Hello!");
+        callEmpleado.setScene(scene);
+        callEmpleado.show();
 
     }
 
