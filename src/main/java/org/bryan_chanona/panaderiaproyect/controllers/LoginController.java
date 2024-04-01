@@ -2,6 +2,7 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
+
+import org.bryan_chanona.panaderiaproyect.models.Panaderia;
 import org.bryan_chanona.panaderiaproyect.models.Usuario;
 
 public class LoginController {
@@ -50,7 +53,9 @@ public class LoginController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        } else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
+        }
+
+        else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
 
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("admin-view.fxml"));
@@ -63,9 +68,29 @@ public class LoginController {
                 throw new RuntimeException(e);
             }
         }
+        else if (!App.getPan().getEmpleados().isEmpty()) {
+            for (Usuario empleado : App.getPan().getEmpleados()) {
+                if (empleado.getUserEmpleado().equals(userName) && empleado.getContraEmpleado().equals(userPassword)) {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("empleado-view.fxml"));
+                        Scene scene = new Scene(fxmlLoader.load());
+                        callAd.setTitle("¡Bienvenido!");
+                        callAd.setScene(scene);
+                        callAd.show();
+                        return; // Sale del método después de mostrar la vista del empleado
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+            // Si llega aquí, significa que las credenciales no coinciden con ningún empleado
+            System.out.println("Credenciales incorrectas");
+        }
 
 
     }
+
+
 
     @FXML
     void initialize() {

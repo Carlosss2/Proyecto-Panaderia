@@ -35,8 +35,8 @@
       <Label layoutX="313.0" layoutY="244.0" text="Nombre del producto:" />
       <Label layoutX="320.0" layoutY="316.0" prefHeight="17.0" prefWidth="119.0" text="Cantidad a agregar:" />
       <TextField fx:id="nombreProducto" layoutX="439.0" layoutY="240.0" prefHeight="25.0" prefWidth="259.0" />
-      <TextField fx:id="cantidadAgregar" layoutX="439.0" layoutY="312.0" prefHeight="25.0" prefWidth="259.0" />
+      <TextField fx:id="cantidadAeliminar" layoutX="439.0" layoutY="312.0" prefHeight="25.0" prefWidth="259.0" />
       <Button fx:id="salirBoton" layoutX="416.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#salirBoton" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: RED;" text="SALIR" textFill="WHITE" />
-      <Button fx:id="botonAgregar" layoutX="596.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#botonAgregar" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="AGREGAR" textFill="WHITE" />
+      <Button fx:id="botonEliminar" layoutX="596.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#botonAgregar" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="ELIMINAR" textFill="WHITE" />
    </children>
 </AnchorPane>

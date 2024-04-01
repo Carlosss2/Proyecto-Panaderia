@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EditarMateriaPrimaController">
+<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.AgregarUserController">
    <children>
       <ImageView fitHeight="456.0" fitWidth="499.0" layoutX="195.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,7 +27,7 @@
             <Image url="@img/panaderia.png" />
          </image>
       </ImageView>
-      <TextField layoutX="218.0" layoutY="243.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+      <TextField fx:id="contraseniaUser" layoutX="218.0" layoutY="243.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
       <Label layoutX="71.0" layoutY="243.0" text="Contraseña:">
          <font>
             <Font name="System Bold" size="24.0" />
@@ -43,11 +43,11 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Button layoutX="62.0" layoutY="434.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Agregar" textFill="WHITE">
+      <Button layoutX="62.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#agregarButon" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Agregar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TextField layoutX="218.0" layoutY="182.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+      <TextField fx:id="nombreUser" layoutX="218.0" layoutY="182.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
    </children>
 </AnchorPane>

@@ -21,6 +21,7 @@ public class SuAdminController {
     Stage callMateriaPrima = new Stage();
 
     Stage callEmpleado = new Stage();
+    Stage callRegistroVentas=new Stage();
 
     @FXML
     void onMouseClickEmpleadosButton(MouseEvent event) throws IOException {
@@ -58,7 +59,13 @@ public class SuAdminController {
     }
 
     @FXML
-    void onMouseClickRegistroVentasButton(MouseEvent event) {
+    void onMouseClickRegistroVentasButton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("registro-ventas-view.fxml"));
+        Scene scene = null;
+        scene = new Scene(fxmlLoader.load());
+        callRegistroVentas.setTitle("Hello!");
+        callRegistroVentas.setScene(scene);
+        callRegistroVentas.show();
 
     }
 

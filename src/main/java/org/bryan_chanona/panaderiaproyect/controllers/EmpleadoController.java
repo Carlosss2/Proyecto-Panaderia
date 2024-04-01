@@ -10,8 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 
-
-public class AdminController {
+public class EmpleadoController {
 
     @FXML
     private ResourceBundle resources;
@@ -20,20 +19,6 @@ public class AdminController {
     private URL location;
     Stage callProducto = new Stage();
     Stage callMateriaPrima = new Stage();
-    Stage callEmpleado = new Stage();
-    Stage callRegistroVentas=new Stage();
-
-
-    @FXML
-    void onMouseClickEmpleadosButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("usuario-view.fxml"));
-        Scene scene = null;
-        scene = new Scene(fxmlLoader.load());
-        callEmpleado.setTitle("Hello!");
-        callEmpleado.setScene(scene);
-        callEmpleado.show();
-
-    }
 
     @FXML
     void onMouseClickMateriaPrimaButton(MouseEvent event) throws IOException {
@@ -54,17 +39,6 @@ public class AdminController {
         callProducto.setTitle("Hello!");
         callProducto.setScene(scene);
         callProducto.show();
-
-    }
-
-    @FXML
-    void onMouseClickRegistroVentasButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("registro-ventas-view.fxml"));
-        Scene scene = null;
-        scene = new Scene(fxmlLoader.load());
-        callRegistroVentas.setTitle("Hello!");
-        callRegistroVentas.setScene(scene);
-        callRegistroVentas.show();
 
     }
 

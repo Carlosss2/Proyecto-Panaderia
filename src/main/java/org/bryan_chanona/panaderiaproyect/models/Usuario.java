@@ -7,6 +7,15 @@ public class Usuario {
     private String contraseniaAd = "administrador123";
     private String userEmpleado;
     private String contraEmpleado;
+
+    public String getUserEmpleado() {
+        return userEmpleado;
+    }
+
+    public String getContraEmpleado() {
+        return contraEmpleado;
+    }
+
     public Usuario (){
 
     }
@@ -30,5 +39,10 @@ public class Usuario {
 
     public String getContraseniaAd() {
         return contraseniaAd;
+    }
+
+
+    public String seeUser(){
+        return "Usuario"+userEmpleado+ ""+contraEmpleado;
     }
 }
