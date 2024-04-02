@@ -21,7 +21,7 @@ public class ProductoController {
     Stage callEliminarProducto = new Stage();
     Stage callModificarProducto = new Stage();
     Stage callVenderProducto = new Stage();
-
+    Stage callInventario=new Stage();
 
     @FXML
     void onMouseClickAgregarButton(MouseEvent event) throws IOException {
@@ -65,6 +65,16 @@ public class ProductoController {
         callVenderProducto.show();
 
     }
+    @FXML
+    void inventarioBoton(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventario-productos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callInventario.setTitle("Hello!");
+        callInventario.setScene(scene);
+        callInventario.show();
+
+    }
+
 
     @FXML
     void initialize() {
