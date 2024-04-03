@@ -38,7 +38,8 @@ public class ProductoController {
     @FXML
     void onMouseClickAgregarButton(MouseEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("agregarProducto-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene;
+        scene = new Scene(fxmlLoader.load());
         callAgregarProducto.setTitle("Hello!");
         callAgregarProducto.setScene(scene);
         callAgregarProducto.show();
@@ -83,4 +84,6 @@ public class ProductoController {
 
     }
 
+    public void inventarioBoton(MouseEvent mouseEvent) {
+    }
 }

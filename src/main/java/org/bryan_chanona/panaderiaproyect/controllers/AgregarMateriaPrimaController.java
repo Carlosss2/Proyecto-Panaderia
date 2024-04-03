@@ -5,8 +5,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
-    public class AgregarMateriaPrimaController {
+public class AgregarMateriaPrimaController {
 
         @FXML
         private ResourceBundle resources;
@@ -23,6 +24,11 @@ import javafx.scene.control.Button;
 
         }
 
-    }
+        public void salirBoton(MouseEvent mouseEvent) {
+        }
+
+        public void agregarBoton(MouseEvent mouseEvent) {
+        }
+}
 
 
