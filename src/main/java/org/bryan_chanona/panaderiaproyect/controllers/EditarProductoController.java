@@ -38,7 +38,6 @@ public class EditarProductoController {
     @FXML
     private Button verButton;
 
-
     @FXML
     private TextField actualizarCantidadPanes;
 

@@ -1,5 +1,7 @@
 package org.bryan_chanona.panaderiaproyect.models;
 
+import org.bryan_chanona.panaderiaproyect.App;
+
 import java.util.ArrayList;
 
 public class Panaderia {
@@ -15,10 +17,6 @@ public class Panaderia {
     private Integer totalMaleta=0;
     private Integer totalCazueleja=0;
     private Integer totalEmpanada=0;
-
-
-
-
     public void sumarPanesYema (Integer cantidadYema){
         totalPanYema = totalPanYema + cantidadYema;
     }
@@ -130,11 +128,5 @@ public class Panaderia {
         return empleados.add(usuario);
     }
 
-    @Override
-    public String toString() {
-        return "Panaderia{" +
 
-                " empleados=" + empleados +
-                '}';
-    }
 }

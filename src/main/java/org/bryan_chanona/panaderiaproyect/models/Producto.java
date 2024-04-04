@@ -8,9 +8,11 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Producto {
+
     private final StringProperty nombrePan;
     private final IntegerProperty cantidadProducto;
     private final DoubleProperty precioProducto;
+
 
     public Producto(String nombre, Integer cantidad, Double precio) {
         this.nombrePan = new SimpleStringProperty(nombre);
@@ -24,6 +26,10 @@ public class Producto {
 
     public void setPrecioProducto(double precioProducto) {
         this.precioProducto.set(precioProducto);
+    }
+
+    public double getPrecioProducto() {
+        return precioProducto.get();
     }
 
     public int getCantidadProducto() {
@@ -45,4 +51,5 @@ public class Producto {
     public DoubleProperty getPrecioProductoProperty() {
         return precioProducto;
     }
+
 }
