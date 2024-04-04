@@ -22,6 +22,10 @@ public class Producto {
         this.cantidadProducto.set(cantidadProducto);
     }
 
+    public void setPrecioProducto(double precioProducto) {
+        this.precioProducto.set(precioProducto);
+    }
+
     public int getCantidadProducto() {
         return cantidadProducto.get();
     }
