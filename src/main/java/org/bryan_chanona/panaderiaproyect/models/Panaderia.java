@@ -3,28 +3,27 @@ package org.bryan_chanona.panaderiaproyect.models;
 import java.util.ArrayList;
 
 public class Panaderia {
-    private Integer totalPanaYema;
-    private Integer totalChorizo;
-    private Integer totalPanMicropan;
-    private Integer totalPanBienmesabe;
-    private Integer totalRosquillaSimple;
-    private Integer totalRosquillaMatizada;
-    private Integer totalBolillo;
-    private Integer totalZisote;
-    private Integer totalHigo;
-    private Integer totalMaleta;
-    private Integer totalCazueleja;
-    private Integer totalEmpanada;
+    private Integer totalPanYema =0;
+    private Integer totalChorizo=0;
+    private Integer totalPanMicropan=0;
+    private Integer totalPanBienmesabe=0;
+    private Integer totalRosquillaSimple=0;
+    private Integer totalRosquillaMatizada=0;
+    private Integer totalBolillo=0;
+    private Integer totalZisote=0;
+    private Integer totalHigo=0;
+    private Integer totalMaleta=0;
+    private Integer totalCazueleja=0;
+    private Integer totalEmpanada=0;
 
 
 
 
-    public void sumarPanesYema (Integer cantidad){
-
-        totalPanaYema = totalPanaYema + cantidad;
+    public void sumarPanesYema (Integer cantidadYema){
+        totalPanYema = totalPanYema + cantidadYema;
     }
-    public Integer getTotalPanaYema() {
-        return totalPanaYema;
+    public Integer getTotalPanYema() {
+        return totalPanYema;
     }
     public void sumarPanesChorizo(Integer cantidad){
         totalChorizo = totalChorizo+ cantidad;

@@ -3,9 +3,11 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Panaderia;
 import org.bryan_chanona.panaderiaproyect.models.Producto;
 
@@ -21,20 +23,37 @@ public class EditarProductoController {
     private TableView<Producto> dataTable;
 
     @FXML
-    private TableColumn<Producto,Integer> cantidadDeProductos;
+    private TableColumn<Producto, Integer> cantidadPanes;
 
     @FXML
-    private TableColumn<Producto, Integer> precioProductoNuevo;
+    private TableColumn<Producto, String> nombrePanes;
 
     @FXML
-    private TableColumn<Producto, String> productoNuevo;
+    private TableColumn<Producto, Double> precioPanes;
 
     @FXML
-    void initialize() {
-        cantidadDeProductos.setCellValueFactory(new PropertyValueFactory<>("CantidadProducto"));
-        precioProductoNuevo.setCellValueFactory(new PropertyValueFactory<>("PrecioProducto"));
-        productoNuevo.setCellValueFactory(new PropertyValueFactory<>("nameProduct"));
+    private Button actualizarButon;
+
+    @FXML
+    private Button verButton;
+
+    @FXML
+    void onMouseClickActualizarButton(MouseEvent event) {
 
     }
 
+    @FXML
+    void onMouseClickVerButton(MouseEvent event) {
+        Panaderia pancito = App.getPan();
+        if (!pancito.getPanes().isEmpty()) {
+            dataTable.getItems().addAll(pancito.getPanes());
+        }
+    }
+
+    @FXML
+    void initialize() {
+        nombrePanes.setCellValueFactory(cellData -> cellData.getValue().getNombrePanProperty());
+        cantidadPanes.setCellValueFactory(cellData-> cellData.getValue().getCantidadProductoProperty().asObject());
+        precioPanes.setCellValueFactory(cellData -> cellData.getValue().getPrecioProductoProperty().asObject());
+    }
 }

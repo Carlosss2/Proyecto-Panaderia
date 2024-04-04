@@ -23,8 +23,6 @@ public class AgregarProductoController {
 
     @FXML
     private ComboBox<String> tipoPanesComboBox;
-    EditarProductoController nuevo = new EditarProductoController();
-
 
     @FXML
     void agregarProducto(MouseEvent event) {
