@@ -33,6 +33,7 @@ public class ProductoController {
     Stage callEliminarProducto = new Stage();
     Stage callModificarProducto = new Stage();
     Stage callVenderProducto = new Stage();
+    Stage callInventario = new Stage();
 
 
     @FXML
@@ -84,6 +85,12 @@ public class ProductoController {
 
     }
 
-    public void inventarioBoton(MouseEvent mouseEvent) {
+    public void inventarioBoton(MouseEvent mouseEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventario-productos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callInventario.setTitle("Hello!");
+        callInventario.setScene(scene);
+        callInventario.show();
+
     }
 }

@@ -18,6 +18,18 @@ public class Producto {
         this.precioProducto = new SimpleDoubleProperty(precio);
     }
 
+    public void setCantidadProducto(int cantidadProducto) {
+        this.cantidadProducto.set(cantidadProducto);
+    }
+
+    public int getCantidadProducto() {
+        return cantidadProducto.get();
+    }
+
+    public String getNombrePan() {
+        return nombrePan.get();
+    }
+
     public StringProperty getNombrePanProperty() {
         return nombrePan;
     }

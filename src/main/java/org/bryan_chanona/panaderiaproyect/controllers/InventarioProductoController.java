@@ -3,7 +3,12 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import org.bryan_chanona.panaderiaproyect.App;
+import org.bryan_chanona.panaderiaproyect.models.Panaderia;
+import org.bryan_chanona.panaderiaproyect.models.Producto;
 
 public class InventarioProductoController {
 
@@ -14,10 +19,33 @@ public class InventarioProductoController {
     private URL location;
 
     @FXML
+    private TableColumn<Producto, Integer> mostrarCantidad;
+
+    @FXML
+    private TableColumn<Producto, Double> mostrarPrecio;
+
+    @FXML
+    private TableColumn<Producto, String> mostrarProduct;
+
+    @FXML
+    private TableView<Producto> tablaInventario;
+
+    @FXML
+    void onMouseCllickVerButton(MouseEvent event) {
+        Panaderia pancito = App.getPan();
+        if (!pancito.getPanes().isEmpty()) {
+            tablaInventario.getItems().addAll(pancito.getPanes());
+        }
+
+    }
+
+    @FXML
     void initialize() {
+        mostrarProduct.setCellValueFactory(cellData -> cellData.getValue().getNombrePanProperty());
+        mostrarCantidad.setCellValueFactory(cellData -> cellData.getValue().getCantidadProductoProperty().asObject());
+        mostrarPrecio.setCellValueFactory(cellData -> cellData.getValue().getPrecioProductoProperty().asObject());
+
 
     }
 
-    public void verBoton(MouseEvent mouseEvent) {
-    }
 }
