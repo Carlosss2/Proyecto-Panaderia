@@ -28,13 +28,13 @@ public class EliminarMateriaPrimaController {
 
     @FXML
     void bottonEliminar(MouseEvent event) {
-        Panaderia listaPanes = App.getPan();
+        Panaderia lista = App.getPan();
         Integer cantidad = Integer.parseInt(cantidadAeliminar.getText());
-        if (!listaPanes.getMaterial().isEmpty()) {
+        if (!lista.getMaterial().isEmpty()) {
 
             List<Producto> productosAEliminar = new ArrayList<>();
 
-            for (Producto producto : listaPanes.getMaterial()) {
+            for (Producto producto : lista.getMaterial()) {
                 if (tipoMateriaComboBox.getValue().equals(producto.getNombrePan()) && cantidad > 0) {
                     if (producto.getCantidadProducto() >= cantidad) {
                         producto.setCantidadProducto(producto.getCantidadProducto() - cantidad);
@@ -46,8 +46,8 @@ public class EliminarMateriaPrimaController {
                     }
                 }
             }
-            
-            listaPanes.getPanes().removeAll(productosAEliminar);
+
+            lista.getPanes().removeAll(productosAEliminar);
         }
 
 
