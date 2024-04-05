@@ -3,6 +3,7 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -46,6 +47,11 @@ public class EliminarUserController {
                     break; // Termina el bucle después de eliminar el usuario
                 }
             }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("La lista de empleados está vacía.");
+            alert.showAndWait();
         }
 
         // Actualizar la tabla después de eliminar
