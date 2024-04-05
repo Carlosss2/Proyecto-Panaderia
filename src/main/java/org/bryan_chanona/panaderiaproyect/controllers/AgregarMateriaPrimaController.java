@@ -45,6 +45,7 @@ public class AgregarMateriaPrimaController {
                 } else {
                         MateriaPrima nuevaMateria = new MateriaPrima(tipoSeleccionado, cantidad,Double.parseDouble(ingreseGastos.getText()) , "Polvo-Liquido");
                         App.getPan().addMateriaPrima(nuevaMateria);
+
                 }
 
         }
