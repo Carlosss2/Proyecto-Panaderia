@@ -3,10 +3,7 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Panaderia;
@@ -61,7 +58,20 @@ public class EditarProductoController {
                     producto.setCantidadProducto(nuevaCantidad);
                     producto.setPrecioProducto(nuevoPrecio);
                     productoEncontrado = true;
+                    actualizarNombre.clear();
+                    actualizarCantidadPanes.clear();
+                    actualizarPrecio.clear();
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("¡Producto actualizado correctamente!.");
+                    alert.showAndWait();
                     break; // Salir del bucle una vez que se actualice el producto
+                } else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Este tipo de pan aun no se encuentra disponible, por lo tanto, no se puede actualizar.");
+                    alert.showAndWait();
+
                 }
             }
             if (productoEncontrado) {
@@ -69,6 +79,11 @@ public class EditarProductoController {
                 dataTable.getItems().clear(); // Limpiar la tabla antes de volver a agregar los productos
                 dataTable.getItems().addAll(lista.getPanes()); // Agregar los productos actualizados
             }
+        } else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("No se ha podido actualizar, la lista se encuentra vacia.");
+            alert.showAndWait();
         }
     }
 
@@ -78,6 +93,13 @@ public class EditarProductoController {
             if (!pancito.getPanes().isEmpty()) {
                 dataTable.getItems().clear(); // Limpiar la tabla antes de agregar los productos
                 dataTable.getItems().addAll(pancito.getPanes()); // Agregar los productos a la tabla
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("La lista se encuentra vacia.");
+                alert.showAndWait();
+
             }
     }
 

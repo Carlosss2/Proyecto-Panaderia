@@ -39,5 +39,10 @@
                </font></Button>
          </children>
       </AnchorPane>
+      <Button layoutX="525.0" layoutY="407.0" mnemonicParsing="false" onMouseClicked="#onMouseClickCerrarButton" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #f97d08;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
