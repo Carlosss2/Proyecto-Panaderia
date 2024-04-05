@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Panaderia;
 import org.bryan_chanona.panaderiaproyect.models.Producto;
@@ -31,13 +32,13 @@ public class InventarioProductoController {
     private TableView<Producto> tablaInventario;
 
     @FXML
-    void onMouseCllickVerButton(MouseEvent event) {
+    void onMouseClickVerButton(MouseEvent event) {
         Panaderia pancito = App.getPan();
         if (!pancito.getPanes().isEmpty()) {
             tablaInventario.getItems().addAll(pancito.getPanes());
         }
-
     }
+
 
     @FXML
     void initialize() {
@@ -48,4 +49,8 @@ public class InventarioProductoController {
 
     }
 
+    public void onMouseClickSalirButton(MouseEvent mouseEvent) {
+        Stage stage = (Stage) tablaInventario.getScene().getWindow();
+        stage.close();
+    }
 }

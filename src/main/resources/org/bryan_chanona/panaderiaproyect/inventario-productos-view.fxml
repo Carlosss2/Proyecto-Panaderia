@@ -28,7 +28,7 @@
             <Image url="@img/panaderia.png" />
          </image>
       </ImageView>
-      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#onMouseCllickVerButton" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
+      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVerButton" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -45,5 +45,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Button layoutX="565.0" layoutY="444.0" mnemonicParsing="false" onMouseClicked="#onMouseClickSalirButton" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: red;" text="Salir" textFill="WHITE" />
    </children>
 </AnchorPane>

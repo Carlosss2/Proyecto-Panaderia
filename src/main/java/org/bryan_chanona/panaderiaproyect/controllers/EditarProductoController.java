@@ -61,6 +61,9 @@ public class EditarProductoController {
                     producto.setCantidadProducto(nuevaCantidad);
                     producto.setPrecioProducto(nuevoPrecio);
                     productoEncontrado = true;
+                    actualizarNombre.clear();
+                    actualizarCantidadPanes.clear();
+                    actualizarPrecio.clear();
                     break; // Salir del bucle una vez que se actualice el producto
                 }
             }

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Pan;
 
@@ -39,15 +40,20 @@ public class AgregarProductoController {
 
         if (productoExistente != null) {
             productoExistente.setCantidadProducto(productoExistente.getCantidadProducto() + cantidad);
+            cantidadAagregar.clear();
         } else {
             Pan nuevoPan = new Pan(tipoSeleccionado, cantidad, 1.00, "Mediano", "Dulce");
             App.getPan().addPan(nuevoPan);
+            cantidadAagregar.clear();
         }
         
     }
 
     @FXML
     void salirBoton(MouseEvent event) {
+        Stage stage = (Stage) tipoPanesComboBox.getScene().getWindow();
+        // Cerrar la ventana (escenario)
+        stage.close();
 
     }
 

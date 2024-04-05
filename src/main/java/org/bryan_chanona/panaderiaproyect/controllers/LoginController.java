@@ -39,6 +39,8 @@ public class LoginController {
         String userName = Usertext.getText();
         String userPassword = Passwordtext.getText();
         if (userName.equals(usuarioLogin.getUserSuperAd()) && userPassword.equals(usuarioLogin.getContraseniaSu())){
+            Usertext.clear();
+            Passwordtext.clear();
 
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("suAdmin-view.fxml"));
@@ -51,6 +53,8 @@ public class LoginController {
                 throw new RuntimeException(e);
             }
         } else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
+            Usertext.clear();
+            Passwordtext.clear();
 
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("admin-view.fxml"));
@@ -63,14 +67,11 @@ public class LoginController {
                 throw new RuntimeException(e);
             }
         }
-
-
     }
-
     @FXML
-    void initialize() {
-
-
+    void onMouseClickCerrarButton(MouseEvent event) {
+    System.exit(1);
     }
+
 
 }

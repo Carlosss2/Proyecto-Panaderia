@@ -121,11 +121,12 @@ public class Panaderia {
 
     ArrayList<Usuario> empleados=new ArrayList<>();
 
-    public ArrayList<Usuario> getEmpleados() {
-        return empleados;
-    }
+
     public boolean addEmpleado(Usuario usuario){
         return empleados.add(usuario);
+    }
+    public ArrayList<Usuario> getEmpleados() {
+        return empleados;
     }
 
 

@@ -24,15 +24,12 @@ public class AgregarUserController {
 
     @FXML
     void agregarButon(MouseEvent event) {
-
         Usuario usuario=new Usuario(nombreUser.getText(),contraseniaUser.getText());
         App.getPan().addEmpleado(usuario);
+        nombreUser.clear();
+        contraseniaUser.clear();
 
     }
 
-    @FXML
-    void initialize() {
-
-    }
 
 }
