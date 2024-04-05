@@ -3,6 +3,7 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -28,7 +29,7 @@ public class AgregarProductoController {
     @FXML
     void agregarProducto(MouseEvent event) {
         String tipoSeleccionado = tipoPanesComboBox.getValue();
-        Integer cantidad = Integer.parseInt(cantidadAagregar.getText());
+       String texto = cantidadAagregar.getText();
 
         Pan productoExistente = null;
         for (Pan producto : App.getPan().getPanes()) {
@@ -39,12 +40,40 @@ public class AgregarProductoController {
         }
 
         if (productoExistente != null) {
-            productoExistente.setCantidadProducto(productoExistente.getCantidadProducto() + cantidad);
-            cantidadAagregar.clear();
+            if(!texto.isEmpty()){
+                Integer cantidad = Integer.parseInt(cantidadAagregar.getText());
+                productoExistente.setCantidadProducto(productoExistente.getCantidadProducto() + cantidad);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("¡Cantidad de panes agregado con exito!");
+                alert.showAndWait();
+                cantidadAagregar.clear();
+            } else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("Rellene los campos correctamente");
+                alert.showAndWait();
+
+            }
         } else {
-            Pan nuevoPan = new Pan(tipoSeleccionado, cantidad, 1.00, "Mediano", "Dulce");
-            App.getPan().addPan(nuevoPan);
-            cantidadAagregar.clear();
+            if (!texto.isEmpty()){
+                Integer cantidad = Integer.parseInt(cantidadAagregar.getText());
+                Pan nuevoPan = new Pan(tipoSeleccionado, cantidad, 1.00, "Mediano", "Dulce");
+                App.getPan().addPan(nuevoPan);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("¡Producto agregado exitosamente!");
+                alert.showAndWait();
+                cantidadAagregar.clear();
+
+            } else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("Rellene los campos correctamente");
+                alert.showAndWait();
+
+            }
+
         }
         
     }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -40,9 +41,24 @@ public class VenderProductoController {
                         Double precio = producto.getPrecioProducto();
                         Double total = precio * cantidad;
                         precioTotal.setText(String.valueOf(total) + " pesos");
+                    }else{
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("No hay panes suficientes, cuenta con: "+ producto.getCantidadProducto());
+                    alert.showAndWait();
                     }
+                } else  {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("No hay panes disponibles de este tipo.");
+                    alert.showAndWait();
                 }
             }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("La lista de productos está vacía.");
+            alert.showAndWait();
         }
 
     }
@@ -70,12 +86,39 @@ public class VenderProductoController {
                         // Verificar si la cantidad restante es cero para marcar el producto para eliminación
                         if (producto.getCantidadProducto() == 0) {
                             productosAEliminar.add(producto);
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setHeaderText(null);
+                            alert.setContentText("¡Producto vendido correctamente!. Ya no quedan mas panes de este tipo disponibles.");
+                            alert.showAndWait();
+                            break;
+
                         }
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText(null);
+                        alert.setContentText("¡Productos vendidos con exito!");
+                        alert.showAndWait();
+                    } else{
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText(null);
+                        alert.setContentText("No hay panes suficientes, cuenta con: "+ producto.getCantidadProducto());
+                        alert.showAndWait();
+
                     }
+                } else  {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("No hay panes disponibles de este tipo.");
+                    alert.showAndWait();
                 }
             }
             // Eliminar los productos marcados para eliminación de la lista principal
             listaPanes.getPanes().removeAll(productosAEliminar);
+        } else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Aun no hay panes disponibles.");
+            alert.showAndWait();
+
         }
     }
     @FXML

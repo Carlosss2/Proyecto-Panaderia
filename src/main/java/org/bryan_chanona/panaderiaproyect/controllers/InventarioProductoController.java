@@ -3,6 +3,7 @@ package org.bryan_chanona.panaderiaproyect.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
@@ -36,6 +37,12 @@ public class InventarioProductoController {
         Panaderia pancito = App.getPan();
         if (!pancito.getPanes().isEmpty()) {
             tablaInventario.getItems().addAll(pancito.getPanes());
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("La lista de productos está vacia");
+            alert.showAndWait();
         }
     }
 

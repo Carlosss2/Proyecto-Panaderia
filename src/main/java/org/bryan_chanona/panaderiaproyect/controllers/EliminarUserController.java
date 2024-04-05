@@ -42,9 +42,21 @@ public class EliminarUserController {
             for (Usuario empleado : listaEmpleado.getEmpleados()) {
                 if (empleado.getUserEmpleado().equals(nombreEmpleadoText) && empleado.getContraEmpleado().equals(contrasenia)) {
                     listaEmpleado.getEmpleados().remove(empleado);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("¡Empleado eliminado exitosamente del sistema!");
+                    alert.showAndWait();
+
                     nombreEliminar.clear();
                     contraUsuario.clear();
                     break; // Termina el bucle después de eliminar el usuario
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Los datos no coinciden, vuelva a intentarlo.");
+                    alert.showAndWait();
+                    nombreEliminar.clear();
+                    contraUsuario.clear();
                 }
             }
         } else {
@@ -52,6 +64,8 @@ public class EliminarUserController {
             alert.setHeaderText(null);
             alert.setContentText("La lista de empleados está vacía.");
             alert.showAndWait();
+            nombreEliminar.clear();
+            contraUsuario.clear();
         }
 
         // Actualizar la tabla después de eliminar
@@ -65,6 +79,11 @@ public class EliminarUserController {
         if (!listaEmpleado.getEmpleados().isEmpty()) {
             dataEmpleado.getItems().clear();
             dataEmpleado.getItems().addAll(listaEmpleado.getEmpleados());
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("La lista de empleados está vacía.");
+            alert.showAndWait();
         }
     }
 
