@@ -9,4 +9,6 @@ public class Pan extends Producto{
         this.tamanio = tamanio;
         this.sabor = sabor;
     }
+
+
 }

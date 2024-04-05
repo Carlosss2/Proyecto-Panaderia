@@ -29,9 +29,14 @@ public class InventarioProductoController {
 
     @FXML
     private TableColumn<Producto, String> mostrarProduct;
-    private TableView<Pan> tablaInventario;
+    private TableView<Producto> tablaInventario;
     @FXML
     void verBoton(MouseEvent event) {
+        Panaderia pan = App.getPan();
+        if (!pan.getPanes().isEmpty()) {
+            tablaInventario.getItems().clear();
+            tablaInventario.getItems().addAll(pan.getPanes());
+        }
 
 
 
@@ -39,9 +44,11 @@ public class InventarioProductoController {
 
     @FXML
     void initialize() {
-        mostrarProduct.setCellValueFactory(new PropertyValueFactory<>("nameProduct"));
-        mostrarPrecio.setCellValueFactory(new PropertyValueFactory<>("cantidadProduct"));
-        mostrarCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidadProducto"));
+
+        mostrarProduct.setCellValueFactory(cellData -> cellData.getValue().getNombrePanProperty());
+        mostrarCantidad.setCellValueFactory(cellData-> cellData.getValue().getCantidadProductoProperty().asObject());
+        mostrarPrecio.setCellValueFactory(cellData -> cellData.getValue().getPrecioProductoProperty().asObject());
+
 
     }
 
