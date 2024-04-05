@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Panaderia;
 import org.bryan_chanona.panaderiaproyect.models.Producto;
+import org.bryan_chanona.panaderiaproyect.models.Venta;
 
 public class VenderProductoController {
     @FXML
@@ -30,6 +31,8 @@ public class VenderProductoController {
 
     @FXML
     private ComboBox<String> venderPanes;
+
+    Double totalVenta;
     @FXML
     void onMouseClickListoButton(MouseEvent event) {
         Panaderia listaPanes = App.getPan();
@@ -41,6 +44,8 @@ public class VenderProductoController {
                         Double precio = producto.getPrecioProducto();
                         Double total = precio * cantidad;
                         precioTotal.setText(String.valueOf(total) + " pesos");
+                        //
+                        totalVenta=total;
                     }else{
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText(null);
@@ -82,7 +87,6 @@ public class VenderProductoController {
                 if (venderPanes.getValue().equals(producto.getNombrePan()) && cantidad > 0) {
                     if (producto.getCantidadProducto() >= cantidad) {
                         producto.setCantidadProducto(producto.getCantidadProducto() - cantidad);
-
                         // Verificar si la cantidad restante es cero para marcar el producto para eliminación
                         if (producto.getCantidadProducto() == 0) {
                             productosAEliminar.add(producto);
@@ -97,6 +101,9 @@ public class VenderProductoController {
                         alert.setHeaderText(null);
                         alert.setContentText("¡Productos vendidos con exito!");
                         alert.showAndWait();
+                        //
+                        Venta venta =new Venta(String.valueOf(venderPanes.getValue()),cantidad,totalVenta);
+                        App.getPan().registroVenta(venta);
                     } else{
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setHeaderText(null);

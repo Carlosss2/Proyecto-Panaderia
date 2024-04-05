@@ -136,4 +136,12 @@ public class Panaderia {
     public boolean addMateriaPrima(MateriaPrima materiaPrima){
         return material.add(materiaPrima);
     }
+    ArrayList<Venta> ventas=new ArrayList<>();
+
+    public ArrayList<Venta> getVentas() {
+        return ventas;
+    }
+    public boolean registroVenta(Venta venta) {
+        return ventas.add(venta);
+    }
 }
