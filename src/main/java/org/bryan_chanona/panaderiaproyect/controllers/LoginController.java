@@ -16,6 +16,7 @@ import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Usuario;
 
 public class LoginController {
+
     Usuario usuarioLogin = new Usuario();
 
     @FXML
@@ -33,9 +34,6 @@ public class LoginController {
     @FXML
     private TextField Usertext;
 
-    Stage callSu = new Stage();
-    Stage callAd = new Stage();
-
     private int intentos = 0;
     private final int MAX_INTENTOS = 3;
 
@@ -45,29 +43,43 @@ public class LoginController {
         String userPassword = Passwordtext.getText();
 
         if (intentos < MAX_INTENTOS) {
+            // Verificar si es Super Administrador
             if (userName.equals(usuarioLogin.getUserSuperAd()) && userPassword.equals(usuarioLogin.getContraseniaSu())) {
                 abrirVentana("suAdmin-view.fxml", "Super Administrador");
-                Usertext.clear();
-                Passwordtext.clear();
+                resetearCampos();
                 return;
-            } else if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
+            }
+
+            // Verificar si es Administrador
+            if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
                 abrirVentana("admin-view.fxml", "Administrador");
-                Usertext.clear();
-                Passwordtext.clear();
+                resetearCampos();
                 return;
-            } else {
-                intentos++;
-                if (intentos == MAX_INTENTOS) {
-                    mostrarAlerta("Hasta luego", "Ha alcanzado el máximo de intentos.");
-                    cerrarVentana();
-                } else {
-                    mostrarAlerta("Error de inicio de sesión", "El correo o la contraseña no coinciden. Intento " + intentos + "/" + MAX_INTENTOS + ". Vuelva a intentarlo.");
-                    Usertext.clear();
-                    Passwordtext.clear();
+            }
+
+            // Verificar empleados
+            for (Usuario empleado : App.getPan().getEmpleados()) {
+                if (empleado.getUserEmpleado().equals(userName) && empleado.getContraEmpleado().equals(userPassword)) {
+                    abrirVentana("empleado-view.fxml", "Empleado");
+                    resetearCampos();
+                    return;
                 }
+            }
+
+            // Si no se encontró coincidencia, mostrar mensaje de error
+            mostrarAlerta("Error de inicio de sesión", "El correo o la contraseña no coinciden. Intento " + (intentos + 1) + "/" + MAX_INTENTOS + ". Vuelva a intentarlo.");
+            intentos++;
+            Usertext.clear();
+            Passwordtext.clear();
+
+            // Si se alcanza el máximo de intentos, mostrar alerta y cerrar ventana
+            if (intentos == MAX_INTENTOS) {
+                mostrarAlerta("Hasta luego", "Ha alcanzado el máximo de intentos.");
+                cerrarVentana();
             }
         }
     }
+
     @FXML
     void onMouseClickCerrarButton(MouseEvent event) {
         cerrarVentana();
@@ -96,5 +108,10 @@ public class LoginController {
     private void cerrarVentana() {
         Stage stage = (Stage) SingInButton.getScene().getWindow();
         stage.close();
+    }
+
+    private void resetearCampos() {
+        Usertext.clear();
+        Passwordtext.clear();
     }
 }

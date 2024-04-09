@@ -46,44 +46,52 @@ public class EditarProductoController {
 
     @FXML
     void onMouseClickActualizarButton(MouseEvent event) {
-        Integer nuevaCantidad = Integer.parseInt(actualizarCantidadPanes.getText());
-        Double nuevoPrecio = Double.parseDouble(actualizarPrecio.getText());
+        String nuevaCantidad = actualizarCantidadPanes.getText();
+        String nuevoPrecio = actualizarPrecio.getText();
         String nombrePan = actualizarNombre.getText();
         Panaderia lista = App.getPan();
-
-        if (!lista.getPanes().isEmpty()) {
-            boolean productoEncontrado = false;
-            for (Producto producto : lista.getPanes()) {
-                if (nombrePan.equals(producto.getNombrePan())) {
-                    producto.setCantidadProducto(nuevaCantidad);
-                    producto.setPrecioProducto(nuevoPrecio);
-                    productoEncontrado = true;
-                    actualizarNombre.clear();
-                    actualizarCantidadPanes.clear();
-                    actualizarPrecio.clear();
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText(null);
-                    alert.setContentText("¡Producto actualizado correctamente!.");
-                    alert.showAndWait();
-                    break; // Salir del bucle una vez que se actualice el producto
-                } else{
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText(null);
-                    alert.setContentText("Este tipo de pan aun no se encuentra disponible, por lo tanto, no se puede actualizar.");
-                    alert.showAndWait();
-
-                }
-            }
-            if (productoEncontrado) {
-                // Limpiar la tabla y agregar de nuevo los productos actualizados
-                dataTable.getItems().clear(); // Limpiar la tabla antes de volver a agregar los productos
-                dataTable.getItems().addAll(lista.getPanes()); // Agregar los productos actualizados
-            }
-        } else{
+        if (nuevaCantidad.isEmpty() || nuevoPrecio.isEmpty() || nombrePan.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);
-            alert.setContentText("No se ha podido actualizar, la lista se encuentra vacia.");
+            alert.setContentText("Rellene los campos correctamente.");
             alert.showAndWait();
+        } else {
+            if (!lista.getPanes().isEmpty()) {
+                boolean productoEncontrado = false;
+                for (Producto producto : lista.getPanes()) {
+                    if (nombrePan.equals(producto.getNombrePan())) {
+                        Integer cantidadNueva = Integer.parseInt(actualizarCantidadPanes.getText());
+                        Double precio = Double.parseDouble(actualizarPrecio.getText());
+                        producto.setCantidadProducto(cantidadNueva);
+                        producto.setPrecioProducto(precio);
+                        productoEncontrado = true;
+                        actualizarNombre.clear();
+                        actualizarCantidadPanes.clear();
+                        actualizarPrecio.clear();
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText(null);
+                        alert.setContentText("¡Producto actualizado correctamente!.");
+                        alert.showAndWait();
+                        break; // Salir del bucle una vez que se actualice el producto
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText(null);
+                        alert.setContentText("Este tipo de pan aun no se encuentra disponible, por lo tanto, no se puede actualizar.");
+                        alert.showAndWait();
+
+                    }
+                }
+                if (productoEncontrado) {
+                    // Limpiar la tabla y agregar de nuevo los productos actualizados
+                    dataTable.getItems().clear(); // Limpiar la tabla antes de volver a agregar los productos
+                    dataTable.getItems().addAll(lista.getPanes()); // Agregar los productos actualizados
+                }
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("No se ha podido actualizar, la lista se encuentra vacia.");
+                alert.showAndWait();
+            }
         }
     }
 
