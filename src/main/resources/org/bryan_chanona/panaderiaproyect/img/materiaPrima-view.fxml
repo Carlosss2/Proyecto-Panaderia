@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.MateriaPrimaController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="650.0" style="-fx-background-color: #E08E53;">
+         <children>
+            <AnchorPane layoutX="-5.0" prefHeight="490.0" prefWidth="659.0" style="-fx-background-color: #EBB45B;">
+               <children>
+                  <ImageView fitHeight="490.0" fitWidth="534.0" layoutX="125.0">
+                     <image>
+                        <Image url="@img/esquina1.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="50.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#onMouseClickEliminarMateriaButton" prefHeight="66.0" prefWidth="298.0" style="-fx-background-radius: 15; -fx-background-color: orange; -fx-border-color: #B5BABB; -fx-border-width: 3; -fx-border-radius: 15;" text="Eliminar materia prima">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#onMouseClickModificarMateriaButton" prefHeight="66.0" prefWidth="298.0" style="-fx-background-radius: 15; -fx-background-color: orange; -fx-border-color: #B5BABB; -fx-border-width: 3; -fx-border-radius: 15;" text="Modificar materia prima">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button layoutX="50.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#onMouseClickAgregarMateriaButton" prefHeight="66.0" prefWidth="298.0" style="-fx-background-radius: 15; -fx-background-color: orange; -fx-border-color: #B5BABB; -fx-border-width: 3; -fx-border-radius: 15;" text="Agregar materia prima">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eba15b" height="81.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="659.0" />
+                  <ImageView fitHeight="404.0" fitWidth="275.0" layoutX="384.0" layoutY="90.0">
+                     <image>
+                        <Image url="@img/materiaPrima.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="206.0" layoutY="14.0" text="Materia Prima" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
