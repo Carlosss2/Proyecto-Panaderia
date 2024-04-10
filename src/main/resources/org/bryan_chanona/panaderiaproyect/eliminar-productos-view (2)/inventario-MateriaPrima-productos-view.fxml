@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.RegistroVentaController">
+<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.InventarioMateriaPrimaController">
    <children>
       <ImageView fitHeight="456.0" fitWidth="499.0" layoutX="195.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -18,29 +18,28 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="694.0" />
-      <Label layoutX="58.0" layoutY="7.0" text="Registro Ventas" textFill="WHITE">
+      <Label layoutX="14.0" layoutY="7.0" text="Inventario Materia Prima" textFill="WHITE">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="425.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="454.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/panaderia.png" />
          </image>
       </ImageView>
-      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#botonVer" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
+      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TableView fx:id="tableView" layoutX="38.0" layoutY="110.0" prefHeight="274.0" prefWidth="474.0">
+      <TableView layoutX="38.0" layoutY="110.0" prefHeight="274.0" prefWidth="474.0">
         <columns>
-          <TableColumn fx:id="productosView" prefWidth="142.3999900817871" text="Productos" />
-          <TableColumn fx:id="cantidadView" prefWidth="175.2000274658203" text="Cantidad" />
-            <TableColumn fx:id="totalView" prefWidth="155.199951171875" text="Total" />
+          <TableColumn prefWidth="238.40000534057617" text="Materia" />
+            <TableColumn prefWidth="236.0" text="Cantidad" />
         </columns>
       </TableView>
-      <Label layoutX="14.0" layoutY="72.0" text="Presione ver para revisar el inventario">
+      <Label layoutX="14.0" layoutY="72.0" text="Presione ver para revisar el inventario de materia prima.">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

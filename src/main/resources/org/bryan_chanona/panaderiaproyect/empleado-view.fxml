@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #EBB45B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.SuAdminController">
+   <children>
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="109.0" layoutY="70.0" onMouseClicked="#onMouseClickProductosButton">
+         <image>
+            <Image url="@img/panaderia.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="111.0" fitWidth="114.0" layoutX="410.0" layoutY="70.0" onMouseClicked="#onMouseClickMateriaPrimaButton">
+         <image>
+            <Image url="@img/materiPrima.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="109.0" layoutY="181.0" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <Text layoutX="28.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos" wrappingWidth="51.05859375">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="410.0" layoutY="181.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <Text layoutX="20.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia prima">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #EBA15B;">
+         <children>
+            <Text layoutX="488.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

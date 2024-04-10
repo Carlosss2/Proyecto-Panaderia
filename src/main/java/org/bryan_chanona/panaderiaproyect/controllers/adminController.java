@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 
-public class adminController {
+public class AdminController {
 
     @FXML
     private ResourceBundle resources;

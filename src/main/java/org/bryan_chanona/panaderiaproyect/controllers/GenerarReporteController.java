@@ -1,4 +1,4 @@
 package org.bryan_chanona.panaderiaproyect.controllers;
 
-public class AgregarProductosController {
+public class GenerarReporteController {
 }

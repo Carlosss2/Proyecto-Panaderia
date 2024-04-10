@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.LoginController">
    <children>
-      <ImageView fitHeight="421.0" fitWidth="655.0" layoutX="-15.0" layoutY="45.0">
+      <ImageView fitHeight="435.0" fitWidth="655.0" layoutX="-15.0" layoutY="45.0">
          <image>
             <Image url="@img/pan1.png" />
          </image>
@@ -39,10 +39,5 @@
                </font></Button>
          </children>
       </AnchorPane>
-      <Button layoutX="525.0" layoutY="407.0" mnemonicParsing="false" onMouseClicked="#onMouseClickCerrarButton" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #f97d08;" text="Salir" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
