@@ -45,7 +45,7 @@ public class AgregarMateriaPrimaController {
                         Double gastos = Double.parseDouble(gastosTexto);
 
                         MateriaPrima primaExistente = null;
-                        for (MateriaPrima producto : App.getPan().getMaterial()) {
+                        for (MateriaPrima producto : App.getInventario().getListaMateriaPrima()) {
                                 if (producto.getNombrePan().equals(tipoSeleccionado)) {
                                         primaExistente = producto;
                                         break;
@@ -58,7 +58,7 @@ public class AgregarMateriaPrimaController {
                                 limpiar();
                         } else {
                                 MateriaPrima nuevaMateria = new MateriaPrima(tipoSeleccionado, cantidad, gastos, "Polvo-Liquido");
-                                App.getPan().addMateriaPrima(nuevaMateria);
+                                App.getInventario().addMateriaPrima(nuevaMateria);
                                 showAlert("¡Materia prima registrada exitosamente!");
                                 limpiar();
                         }

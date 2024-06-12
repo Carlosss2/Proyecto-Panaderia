@@ -49,16 +49,16 @@ public class EditarProductoController {
         String nuevaCantidad = actualizarCantidadPanes.getText();
         String nuevoPrecio = actualizarPrecio.getText();
         String nombrePan = actualizarNombre.getText();
-        Panaderia lista = App.getPan();
+        Panaderia lista = App.getInventario();
         if (nuevaCantidad.isEmpty() || nuevoPrecio.isEmpty() || nombrePan.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);
             alert.setContentText("Rellene los campos correctamente.");
             alert.showAndWait();
         } else {
-            if (!lista.getPanes().isEmpty()) {
+            if (!lista.getListaProductos().isEmpty()) {
                 boolean productoEncontrado = false;
-                for (Producto producto : lista.getPanes()) {
+                for (Producto producto : lista.getListaProductos()) {
                     if (nombrePan.equals(producto.getNombrePan())) {
                         Integer cantidadNueva = Integer.parseInt(actualizarCantidadPanes.getText());
                         Double precio = Double.parseDouble(actualizarPrecio.getText());
@@ -84,7 +84,7 @@ public class EditarProductoController {
                 if (productoEncontrado) {
                     // Limpiar la tabla y agregar de nuevo los productos actualizados
                     dataTable.getItems().clear(); // Limpiar la tabla antes de volver a agregar los productos
-                    dataTable.getItems().addAll(lista.getPanes()); // Agregar los productos actualizados
+                    dataTable.getItems().addAll(lista.getListaProductos()); // Agregar los productos actualizados
                 }
             } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -97,10 +97,10 @@ public class EditarProductoController {
 
     @FXML
     void onMouseClickVerButton(MouseEvent event) {
-            Panaderia pancito = App.getPan();
-            if (!pancito.getPanes().isEmpty()) {
+            Panaderia pancito = App.getInventario();
+            if (!pancito.getListaProductos().isEmpty()) {
                 dataTable.getItems().clear(); // Limpiar la tabla antes de agregar los productos
-                dataTable.getItems().addAll(pancito.getPanes()); // Agregar los productos a la tabla
+                dataTable.getItems().addAll(pancito.getListaProductos()); // Agregar los productos a la tabla
             }
             else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -13,8 +13,6 @@ public class Venta {
         this.total = new SimpleDoubleProperty(total) ;
     }
 
-
-
     public StringProperty nameProductProperty() {
         return nameProduct;
     }
@@ -28,5 +26,4 @@ public class Venta {
     public DoubleProperty totalProperty() {
         return total;
     }
-
 }

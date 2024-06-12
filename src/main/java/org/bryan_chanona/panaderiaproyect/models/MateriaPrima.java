@@ -8,4 +8,5 @@ public class MateriaPrima extends Producto{
         super(nombre, cantidad, precio);
         this.typeMateria = typeMateria;
     }
+
 }

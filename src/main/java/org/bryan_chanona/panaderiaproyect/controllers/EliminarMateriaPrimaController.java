@@ -41,12 +41,12 @@ public class EliminarMateriaPrimaController {
 
         try {
             Integer cantidad = Integer.parseInt(cantidadTexto);
-            Panaderia lista = App.getPan();
+            Panaderia lista = App.getInventario();
 
-            if (!lista.getMaterial().isEmpty()) {
+            if (!lista.getListaMateriaPrima().isEmpty()) {
                 List<Producto> productosAEliminar = new ArrayList<>();
 
-                for (Producto producto : lista.getMaterial()) {
+                for (Producto producto : lista.getListaMateriaPrima()) {
                     if (tipoSeleccionado.equals(producto.getNombrePan()) && cantidad > 0) {
                         if (producto.getCantidadProducto() >= cantidad) {
                             producto.setCantidadProducto(producto.getCantidadProducto() - cantidad);
@@ -65,7 +65,7 @@ public class EliminarMateriaPrimaController {
                     }
                 }
                 // Eliminar los productos de la lista principal
-                lista.getPanes().removeAll(productosAEliminar);
+                lista.getListaProductos().removeAll(productosAEliminar);
                 showAlert("¡Producto eliminado exitosamente!");
 
             } else {

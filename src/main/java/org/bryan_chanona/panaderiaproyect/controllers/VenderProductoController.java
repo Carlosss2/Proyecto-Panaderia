@@ -37,9 +37,9 @@ public class VenderProductoController {
 
         try {
             Double cantidad = Double.parseDouble(quantityText);
-            Panaderia listaPanes = App.getPan();
+            Panaderia listaPanes = App.getInventario();
 
-            for (Producto producto : listaPanes.getPanes()) {
+            for (Producto producto : listaPanes.getListaProductos()) {
                 if (selectedPan.equals(producto.getNombrePan())) {
                     if (cantidad > 0 && producto.getCantidadProducto() >= cantidad) {
                         Double precio = producto.getPrecioProducto();
@@ -78,22 +78,23 @@ public class VenderProductoController {
 
         try {
             Integer cantidad = Integer.parseInt(quantityText);
-            Panaderia listaPanes = App.getPan();
+            Panaderia listaPanes = App.getInventario();
 
-            for (Producto producto : listaPanes.getPanes()) {
+            for (Producto producto : listaPanes.getListaProductos()) {
                 if (selectedPan.equals(producto.getNombrePan()) && cantidad > 0) {
                     if (producto.getCantidadProducto() >= cantidad) {
                         producto.setCantidadProducto(producto.getCantidadProducto() - cantidad);
 
                         if (producto.getCantidadProducto() == 0) {
-                            listaPanes.getPanes().remove(producto);
+                            listaPanes.getListaProductos().remove(producto);
                             showAlert("¡Producto vendido correctamente! Ya no quedan más panes de este tipo disponibles.");
                         } else {
                             showAlert("¡Productos vendidos con éxito!");
                         }
 
                         Venta venta = new Venta(selectedPan, cantidad, totalVenta);
-                        App.getPan().registroVenta(venta);
+                        App.getInventario().registroVenta(venta);
+
                         return; // Salir del método después de procesar la venta
                     } else {
                         showAlert("No hay suficientes panes disponibles.");

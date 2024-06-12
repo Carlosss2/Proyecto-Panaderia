@@ -11,62 +11,67 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="508.0" prefWidth="693.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EditarProductoController">
+<AnchorPane prefHeight="657.0" prefWidth="923.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EditarProductoController">
     <children>
-        <ImageView fitHeight="456.0" fitWidth="499.0" layoutX="195.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="496.0" fitWidth="496.0" layoutX="428.0" layoutY="132.0">
+         <image>
+            <Image url="@img/remove.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="648.0" fitWidth="709.0" layoutX="215.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@img/esquina1.png" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="694.0" />
-        <Label layoutX="96.0" layoutY="8.0" text="Editar Productos" textFill="WHITE">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="924.0" />
+        <Label layoutX="241.0" layoutY="9.0" text="Editar Productos" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="35.0" />
             </font>
         </Label>
-        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="425.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="633.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@img/panaderia.png" />
             </image>
         </ImageView>
-        <TextField fx:id="actualizarPrecio" layoutX="261.0" layoutY="371.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-        <Label layoutX="45.0" layoutY="371.0" text="Precio Individual:">
+        <TextField fx:id="actualizarPrecio" layoutX="268.0" layoutY="453.0" prefHeight="35.0" prefWidth="285.0" style="-fx-background-radius: 15;" />
+        <Label layoutX="53.0" layoutY="453.0" text="Precio Individual:">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Button fx:id="verButton" layoutX="425.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVerButton" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
+        <Button fx:id="verButton" layoutX="497.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVerButton" prefHeight="58.0" prefWidth="129.0" style="-fx-background-color: green; -fx-background-radius: 15; -fx-border-color: white; -fx-border-width: 3;" text="Ver" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Button>
-        <TableView fx:id="dataTable" layoutX="38.0" layoutY="98.0" prefHeight="200.0" prefWidth="340.0">
+        <TableView fx:id="dataTable" layoutX="29.0" layoutY="146.0" prefHeight="200.0" prefWidth="560.0">
             <columns>
-                <TableColumn fx:id="nombrePanes" prefWidth="94.39999008178711" text="Productos" />
-                <TableColumn fx:id="precioPanes" prefWidth="115.99993896484375" text="Precio" />
-                <TableColumn fx:id="cantidadPanes" prefWidth="130.40000305175784" text="Cantidad" />
+                <TableColumn fx:id="nombrePanes" prefWidth="190.0" text="Productos" />
+                <TableColumn fx:id="precioPanes" prefWidth="209.0" text="Precio" />
+                <TableColumn fx:id="cantidadPanes" prefWidth="160.0" text="Cantidad" />
             </columns>
         </TableView>
-        <Label layoutX="46.0" layoutY="319.0" text="Nombre:">
+        <Label layoutX="54.0" layoutY="401.0" text="Nombre:">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="46.0" layoutY="430.0" text="Cantidad:">
+        <Label layoutX="54.0" layoutY="512.0" text="Cantidad:">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Button fx:id="actualizarButon" layoutX="502.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#onMouseClickActualizarButton" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Actualizar" textFill="WHITE">
+        <Button fx:id="actualizarButon" layoutX="326.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#onMouseClickActualizarButton" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: green; -fx-background-radius: 15; -fx-border-color: white; -fx-border-width: 3;" text="Actualizar" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Button>
-        <TextField fx:id="actualizarCantidadPanes" layoutX="261.0" layoutY="430.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-        <TextField fx:id="actualizarNombre" layoutX="261.0" layoutY="319.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-        <Label layoutX="14.0" layoutY="72.0" text="Revise la tabla antes de actualizar">
+        <TextField fx:id="actualizarCantidadPanes" layoutX="268.0" layoutY="512.0" prefHeight="35.0" prefWidth="285.0" style="-fx-background-radius: 15;" />
+        <TextField fx:id="actualizarNombre" layoutX="268.0" layoutY="398.0" prefHeight="35.0" prefWidth="285.0" style="-fx-background-radius: 15;" />
+        <Label layoutX="29.0" layoutY="94.0" text="Revise la tabla antes de actualizar">
             <font>
-                <Font name="System Bold" size="14.0" />
+                <Font name="System Bold" size="26.0" />
             </font>
         </Label>
     </children>

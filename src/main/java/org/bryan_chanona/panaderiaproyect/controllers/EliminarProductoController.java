@@ -44,11 +44,11 @@ public class EliminarProductoController {
             return;
         }
 
-        Panaderia listaPanes = App.getPan();
+        Panaderia listaPanes = App.getInventario();
         List<Producto> productosAEliminar = new ArrayList<>();
         boolean panEncontrado = false;
 
-        for (Producto producto : listaPanes.getPanes()) {
+        for (Producto producto : listaPanes.getListaProductos()) {
             if (tipoPanSeleccionado.equals(producto.getNombrePan())) {
                 panEncontrado = true;
                 if (producto.getCantidadProducto() >= cantidadEliminar) {
@@ -69,7 +69,7 @@ public class EliminarProductoController {
         }
 
         // Eliminar los productos marcados para eliminación de la lista principal
-        listaPanes.getPanes().removeAll(productosAEliminar);
+        listaPanes.getListaProductos().removeAll(productosAEliminar);
     }
 
     @FXML

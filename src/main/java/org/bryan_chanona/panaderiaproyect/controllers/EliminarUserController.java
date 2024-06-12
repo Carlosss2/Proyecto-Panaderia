@@ -37,11 +37,11 @@ public class EliminarUserController {
         String nombreEmpleadoText = nombreEliminar.getText();
         String contrasenia = contraUsuario.getText();
 
-        Panaderia listaEmpleado = App.getPan();
-        if (!listaEmpleado.getEmpleados().isEmpty()) {
-            for (Usuario empleado : listaEmpleado.getEmpleados()) {
+        Panaderia listaEmpleado = App.getInventario();
+        if (!listaEmpleado.getListaEmpleados().isEmpty()) {
+            for (Usuario empleado : listaEmpleado.getListaEmpleados()) {
                 if (empleado.getUserEmpleado().equals(nombreEmpleadoText) && empleado.getContraEmpleado().equals(contrasenia)) {
-                    listaEmpleado.getEmpleados().remove(empleado);
+                    listaEmpleado.getListaEmpleados().remove(empleado);
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText(null);
                     alert.setContentText("¡Empleado eliminado exitosamente del sistema!");
@@ -70,15 +70,15 @@ public class EliminarUserController {
 
         // Actualizar la tabla después de eliminar
         dataEmpleado.getItems().clear();
-        dataEmpleado.getItems().addAll(listaEmpleado.getEmpleados());
+        dataEmpleado.getItems().addAll(listaEmpleado.getListaEmpleados());
     }
 
     @FXML
     void onMouseClickVerEmpleadosButton(MouseEvent event) {
-        Panaderia listaEmpleado = App.getPan();
-        if (!listaEmpleado.getEmpleados().isEmpty()) {
+        Panaderia listaEmpleado = App.getInventario();
+        if (!listaEmpleado.getListaEmpleados().isEmpty()) {
             dataEmpleado.getItems().clear();
-            dataEmpleado.getItems().addAll(listaEmpleado.getEmpleados());
+            dataEmpleado.getItems().addAll(listaEmpleado.getListaEmpleados());
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);

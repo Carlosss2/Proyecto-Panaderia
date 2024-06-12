@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EliminarMateriaPrimaController">
+<AnchorPane prefHeight="729.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bryan_chanona.panaderiaproyect.controllers.EliminarMateriaPrimaController">
    <children>
       <ImageView fitHeight="657.0" fitWidth="722.0" layoutX="284.0" layoutY="-1.0">
          <image>
@@ -23,7 +23,7 @@
             <Font name="Impact" size="57.0" />
          </font>
       </Label>
-      <ImageView fitHeight="304.0" fitWidth="456.0" layoutY="425.0">
+      <ImageView fitHeight="465.0" fitWidth="698.0" layoutY="264.0">
          <image>
             <Image url="@img/pan2.png" />
          </image>
@@ -33,10 +33,19 @@
             <Font name="Tahoma Bold" size="38.0" />
          </font>
       </Label>
-      <TextField fx:id="cantidadAeliminar" layoutX="438.0" layoutY="303.0" prefHeight="25.0" prefWidth="231.0" />
-      <Label layoutX="317.0" layoutY="307.0" text="Cantidad a eliminar:" />
-      <Button layoutX="415.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#bottonSalir" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: RED;" text="SALIR" textFill="WHITE" />
-      <Button layoutX="586.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#bottonEliminar" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="ELIMINAR" textFill="WHITE" />
-      <ComboBox fx:id="tipoMateriaComboBox" layoutX="294.0" layoutY="237.0" prefHeight="26.0" prefWidth="175.0" promptText="Selecciones el producto" />
+      <TextField fx:id="cantidadAeliminar" layoutX="584.0" layoutY="384.0" prefHeight="44.0" prefWidth="339.0" />
+      <Label layoutX="602.0" layoutY="328.0" text="Cantidad a eliminar:">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font></Label>
+      <Button layoutX="619.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#bottonSalir" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: RED; -fx-border-color: white; -fx-border-width: 3;" text="SALIR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Button layoutX="780.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#bottonEliminar" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: GREEN; -fx-border-color: white; -fx-border-width: 3;" text="ELIMINAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <ComboBox fx:id="tipoMateriaComboBox" layoutX="77.0" layoutY="202.0" prefHeight="48.0" prefWidth="329.0" promptText="Seleccione un producto" />
    </children>
 </AnchorPane>

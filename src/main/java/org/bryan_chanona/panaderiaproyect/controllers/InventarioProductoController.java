@@ -34,9 +34,9 @@ public class InventarioProductoController {
 
     @FXML
     void onMouseClickVerButton(MouseEvent event) {
-        Panaderia pancito = App.getPan();
-        if (!pancito.getPanes().isEmpty()) {
-            tablaInventario.getItems().addAll(pancito.getPanes());
+        Panaderia pancito = App.getInventario();
+        if (!pancito.getListaProductos().isEmpty()) {
+            tablaInventario.getItems().addAll(pancito.getListaProductos());
         }
         else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

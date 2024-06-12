@@ -28,15 +28,15 @@
             <Image url="@img/panaderia.png" />
          </image>
       </ImageView>
-      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
+      <Button layoutX="296.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#onMouseClickVerButton" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Ver" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TableView layoutX="38.0" layoutY="110.0" prefHeight="274.0" prefWidth="474.0">
+      <TableView fx:id="dataTableMateria" layoutX="38.0" layoutY="110.0" prefHeight="274.0" prefWidth="474.0">
         <columns>
-          <TableColumn prefWidth="238.40000534057617" text="Materia" />
-            <TableColumn prefWidth="236.0" text="Cantidad" />
+          <TableColumn fx:id="nameMateria" prefWidth="238.40000534057617" text="Materia" />
+            <TableColumn fx:id="cantidadMateria" prefWidth="236.0" text="Cantidad" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="72.0" text="Presione ver para revisar el inventario de materia prima.">
@@ -44,5 +44,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Button layoutX="571.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#onMouseClickSalirButton" prefHeight="42.0" prefWidth="58.0" style="-fx-background-color: red;" text="Salir" textFill="WHITE" />
    </children>
 </AnchorPane>

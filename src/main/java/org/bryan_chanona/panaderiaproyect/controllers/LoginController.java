@@ -13,11 +13,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
+import org.bryan_chanona.panaderiaproyect.models.Panaderia;
 import org.bryan_chanona.panaderiaproyect.models.Usuario;
 
 public class LoginController {
 
-    Usuario usuarioLogin = new Usuario();
 
     @FXML
     private ResourceBundle resources;
@@ -44,21 +44,32 @@ public class LoginController {
 
         if (intentos < MAX_INTENTOS) {
             // Verificar si es Super Administrador
-            if (userName.equals(usuarioLogin.getUserSuperAd()) && userPassword.equals(usuarioLogin.getContraseniaSu())) {
-                abrirVentana("suAdmin-view.fxml", "Super Administrador");
-                resetearCampos();
-                return;
+            if (!App.getInventario().getListaEmpleados().isEmpty()){
+                for (Usuario listaEmpleados: App.getInventario().getListaEmpleados()){
+                    if (userName.equals(listaEmpleados.getUserEmpleado()) && userPassword.equals(listaEmpleados.getContraEmpleado())) {
+                        abrirVentana("suAdmin-view.fxml", "Super Administrador");
+                        resetearCampos();
+                        return;
+                    }
+                }
             }
 
-            // Verificar si es Administrador
-            if (userName.equals(usuarioLogin.getUserAdministrador()) && userPassword.equals(usuarioLogin.getContraseniaAd())) {
-                abrirVentana("admin-view.fxml", "Administrador");
-                resetearCampos();
-                return;
-            }
+  if (!App.getInventario().getListaEmpleados().isEmpty()){
+      for (Usuario listaEmpleados: App.getInventario().getListaEmpleados()){
+          // Verificar si es Administrador
+          if (userName.equals(listaEmpleados.getUserEmpleado()) && userPassword.equals(listaEmpleados.getContraEmpleado())) {
+              abrirVentana("admin-view.fxml", "Administrador");
+              resetearCampos();
+              return;
+          }
+
+      }
+
+  }
+
 
             // Verificar empleados
-            for (Usuario empleado : App.getPan().getEmpleados()) {
+            for (Usuario empleado : App.getInventario().getListaEmpleados()) {
                 if (empleado.getUserEmpleado().equals(userName) && empleado.getContraEmpleado().equals(userPassword)) {
                     abrirVentana("empleado-view.fxml", "Empleado");
                     resetearCampos();

@@ -1,40 +1,36 @@
 package org.bryan_chanona.panaderiaproyect.models;
 
-import org.bryan_chanona.panaderiaproyect.App;
 
 import java.util.ArrayList;
 
 public class Panaderia {
-    private ArrayList<Pan> Panes=new ArrayList<>();
 
-    public ArrayList<Pan> getPanes() {
-        return Panes;
+    private ArrayList<Pan> listaProductos=new ArrayList<>();
+    private ArrayList<Usuario> listaEmpleados=new ArrayList<>();
+    private ArrayList<MateriaPrima> listaMateriaPrima=new ArrayList<>();
+    private ArrayList<Venta> ventas=new ArrayList<>();
+
+    public ArrayList<Pan> getListaProductos() {
+        return listaProductos;
     }
-    public boolean addPan(Pan pan ){
-        return Panes.add(pan);
+
+    public boolean agregarProducto(Pan pan ){
+        return listaProductos.add(pan);
     }
-
-    private ArrayList<Usuario> empleados=new ArrayList<>();
-
 
     public boolean addEmpleado(Usuario usuario){
-        return empleados.add(usuario);
+        return listaEmpleados.add(usuario);
     }
-    public ArrayList<Usuario> getEmpleados() {
-        return empleados;
+    public ArrayList<Usuario> getListaEmpleados() {
+        return listaEmpleados;
     }
 
-
-    private ArrayList<MateriaPrima> material=new ArrayList<>();
-
-    public ArrayList<MateriaPrima> getMaterial() {
-        return material;
-    }
     public boolean addMateriaPrima(MateriaPrima materiaPrima){
-        return material.add(materiaPrima);
+        return listaMateriaPrima.add(materiaPrima);
     }
-
-    private ArrayList<Venta> ventas=new ArrayList<>();
+    public ArrayList<MateriaPrima> getListaMateriaPrima() {
+        return listaMateriaPrima;
+    }
 
     public ArrayList<Venta> getVentas() {
         return ventas;

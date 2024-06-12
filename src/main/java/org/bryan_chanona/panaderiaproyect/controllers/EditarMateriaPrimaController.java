@@ -48,11 +48,11 @@ public class EditarMateriaPrimaController {
 
         try {
             Integer nuevaCantidad = Integer.parseInt(cantidadTexto);
-            Panaderia lista = App.getPan();
+            Panaderia lista = App.getInventario();
             boolean productoEncontrado = false;
 
-            if (!lista.getMaterial().isEmpty()) {
-                for (Producto producto : lista.getMaterial()) {
+            if (!lista.getListaMateriaPrima().isEmpty()) {
+                for (Producto producto : lista.getListaMateriaPrima()) {
                     if (nombrePan.equals(producto.getNombrePan())) {
                         producto.setCantidadProducto(nuevaCantidad);
                         productoEncontrado = true;
@@ -61,7 +61,7 @@ public class EditarMateriaPrimaController {
                 }
                 if (productoEncontrado) {
                     // Actualizar el TableView después de modificar el producto
-                    materiaPrimaTable.getItems().setAll(lista.getMaterial());
+                    materiaPrimaTable.getItems().setAll(lista.getListaMateriaPrima());
                     showAlert("¡Producto actualizado exitosamente!");
                     limpiar();
                 } else {
@@ -77,23 +77,20 @@ public class EditarMateriaPrimaController {
             limpiar();
         }
     }
-
     @FXML
     void botonVer(MouseEvent event) {
-        Panaderia materiaPrima = App.getPan();
-        if (!materiaPrima.getMaterial().isEmpty()) {
-            materiaPrimaTable.getItems().setAll(materiaPrima.getMaterial());
+        Panaderia materiaPrima = App.getInventario();
+        if (!materiaPrima.getListaMateriaPrima().isEmpty()) {
+            materiaPrimaTable.getItems().setAll(materiaPrima.getListaMateriaPrima());
         } else {
             showAlert("La lista de materia prima está vacía.");
         }
     }
-
     @FXML
     void initialize() {
         mostrarName.setCellValueFactory(cellData -> cellData.getValue().getNombrePanProperty());
         MostrarCantidad.setCellValueFactory(cellData -> cellData.getValue().getCantidadProductoProperty().asObject());
     }
-
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);

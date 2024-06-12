@@ -33,7 +33,7 @@ public class RegistroVentaController {
 
     @FXML
     void botonVer(MouseEvent event) {
-        Panaderia venta = App.getPan();
+        Panaderia venta = App.getInventario();
         if (!venta.getVentas().isEmpty()) {
             tableView.getItems().clear();
             tableView.getItems().addAll(venta.getVentas());

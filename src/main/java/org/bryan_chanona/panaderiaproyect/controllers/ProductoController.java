@@ -65,9 +65,6 @@ public class ProductoController {
         callModificarProducto.setScene(scene);
         callModificarProducto.show();
 
-
-
-
     }
 
     @FXML
@@ -85,12 +82,18 @@ public class ProductoController {
 
     }
 
-    public void inventarioBoton(MouseEvent mouseEvent)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventario-productos-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        callInventario.setTitle("Hello!");
-        callInventario.setScene(scene);
-        callInventario.show();
+    public void inventarioBoton(MouseEvent mouseEvent ){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventario-productos-view.fxml"));
+            Scene scene = null;
+            scene = new Scene(fxmlLoader.load());
+            callInventario.setTitle("Hello!");
+            callInventario.setScene(scene);
+            callInventario.show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

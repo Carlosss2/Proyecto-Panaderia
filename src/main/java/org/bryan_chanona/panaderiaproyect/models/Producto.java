@@ -12,8 +12,13 @@ public class Producto {
     private final StringProperty nombrePan;
     private final IntegerProperty cantidadProducto;
     private final DoubleProperty precioProducto;
+    private Double suma =0.0;
 
-
+public Producto(){
+    this.nombrePan = new SimpleStringProperty();
+    this.cantidadProducto = new SimpleIntegerProperty();
+    this.precioProducto = new SimpleDoubleProperty();
+}
     public Producto(String nombre, Integer cantidad, Double precio) {
         this.nombrePan = new SimpleStringProperty(nombre);
         this.cantidadProducto = new SimpleIntegerProperty(cantidad);
@@ -28,7 +33,7 @@ public class Producto {
         this.precioProducto.set(precioProducto);
     }
 
-    public double getPrecioProducto() {
+    public int getPrecioProducto() {
         return precioProducto.get();
     }
 

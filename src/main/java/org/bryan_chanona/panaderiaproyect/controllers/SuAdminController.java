@@ -20,7 +20,6 @@ public class SuAdminController {
     Stage callProducto = new Stage();
     Stage callMateriaPrima = new Stage();
     Stage callEmpleado = new Stage();
-    Stage callReporte = new Stage();
     Stage callRegistro = new Stage();
 
     @FXML
@@ -64,20 +63,12 @@ public class SuAdminController {
         callRegistro.setScene(scene);
         callRegistro.show();
     }
-    @FXML
-    void onMouseClickReporteButton(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("generarReporte-view.fxml"));
-        Scene scene = null;
-        scene = new Scene(fxmlLoader.load());
-        callReporte.setTitle("Hello!");
-        callReporte.setScene(scene);
-        callReporte.show();
 
-    }
 
     @FXML
     void initialize() {
 
     }
+
 
 }

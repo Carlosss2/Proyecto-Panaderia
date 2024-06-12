@@ -20,6 +20,7 @@ public class MateriaPrimaController {
     Stage callAddMateria = new Stage();
     Stage callDeleteMateria = new Stage();
     Stage callModifiedMateria = new Stage();
+    Stage callInventario = new Stage();
 
     @FXML
     void onMouseClickAgregarMateriaButton(MouseEvent event) throws IOException {
@@ -53,6 +54,15 @@ public class MateriaPrimaController {
         callModifiedMateria.setScene(scene);
         callModifiedMateria.show();
 
+
+    }
+    @FXML
+    void onMouseClickInventarioButton(MouseEvent event)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventarioMateriaPrima-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        callInventario.setTitle("Hello!");
+        callInventario.setScene(scene);
+        callInventario.show();
 
     }
 

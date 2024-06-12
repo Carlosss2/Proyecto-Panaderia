@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import org.bryan_chanona.panaderiaproyect.App;
 import org.bryan_chanona.panaderiaproyect.models.Usuario;
 
@@ -31,12 +32,12 @@ public class AgregarUserController {
             contraseniaUser.clear();
         } else {
             // Obtener la lista de empleados
-            List<Usuario> empleados = App.getPan().getEmpleados();
+            List<Usuario> empleados = App.getInventario().getListaEmpleados();
 
             if (empleados.isEmpty()) {
                 // Si la lista está vacía, agregar directamente el usuario
                 Usuario nuevoUsuario = new Usuario(usuarioNombre, contraaa);
-                App.getPan().addEmpleado(nuevoUsuario);
+                App.getInventario().addEmpleado(nuevoUsuario);
                 mostrarAlerta("¡Empleado agregado exitosamente!");
             } else {
                 // Si la lista no está vacía, verificar si el usuario ya existe
@@ -56,7 +57,7 @@ public class AgregarUserController {
                 } else {
                     // Si el usuario no existe, agregarlo a la lista
                     Usuario nuevoUsuario = new Usuario(usuarioNombre, contraaa);
-                    App.getPan().addEmpleado(nuevoUsuario);
+                    App.getInventario().addEmpleado(nuevoUsuario);
                     mostrarAlerta("¡Empleado agregado exitosamente!");
                 }
             }
@@ -65,6 +66,12 @@ public class AgregarUserController {
             nombreUser.clear();
             contraseniaUser.clear();
         }
+    }
+    @FXML
+    void onMouseClickSalirButton(MouseEvent event) {
+        Stage stage = (Stage) nombreUser.getScene().getWindow();
+        stage.close();
+
     }
 
     private void mostrarAlerta(String mensaje) {

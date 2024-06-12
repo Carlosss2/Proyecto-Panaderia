@@ -1,6 +1,7 @@
 module org.bryan_chanona.panaderiaproyect {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens org.bryan_chanona.panaderiaproyect to javafx.fxml;
